@@ -1,4 +1,5 @@
 <?php 
+//today work progressssssssss
 include('codelibrary/inc/variables.php'); 
 $obj= new database_class();
 $book_data = $obj->getAnyTableAllData($obj->getTable("var_product"), " and u_id != ''");
