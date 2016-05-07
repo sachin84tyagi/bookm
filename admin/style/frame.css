@@ -1,0 +1,305 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0px;
+}
+#container {
+	background-color: #FFF;
+	background-repeat: repeat-y;
+}
+#header {
+	background-image: url(../images/header/header.bg.gif);
+	background-repeat: repeat-x;
+	height: 35px;	
+}
+#header h1 {
+	background-image: url(../images/logo/medelectronic.logo.gif);
+	background-repeat: no-repeat;	
+	margin: 0px 5px 0px 0px;
+	float: left;
+}
+#header h1 a {
+	display: block;
+	width: 174px;
+	height: 35px;
+	text-decoration: none;
+}
+#header h1 span {
+	display: none;
+}
+#header ul#nav {
+	margin: 0px;
+	padding: 11px 0px 0px;
+	list-style-type: none;
+}
+#nav li {
+	height: 24px;
+	display: inline;
+}
+ul#userNav {
+	margin: 0px;
+	padding: 0px 10px 0px 5px;
+	list-style-type: none;
+	float: right;
+}
+#userNav li {
+	font-size: 10px;
+	color: #FFF;
+	font-weight: bold;
+	text-align: right;
+	float: left;
+}
+#userNav li a {
+	color: #000;
+	text-decoration: none;
+}
+#userNav li a:hover {
+	color: #B2DCFB;
+}
+#subNav {
+	background-color: #4791C5;
+	height: 21px;
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+#subNav li {
+	font-size: 11px;
+	display: inline;
+}
+#subNav li a {
+	color: #FFF;
+	text-decoration: none;
+	float: left;
+	border: 1px solid #4791C5;
+	border-right: 1px solid #CEE8FF;
+	padding: 2px 5px;
+}
+#subNav li a:hover {
+	color: #000;
+	background-color: #B2DCFB;
+	border: 1px solid #013570;
+}
+#patientBar {
+	background-image: url(../images/navigation/patientbar.bg.gif);
+	height: 24px;
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+#patientBar li {
+	font-size: 12px;
+	display: block;
+	float: left;
+	padding: 4px 5px 0px;
+}
+#patientBar li span {
+	font-weight: bold;
+}
+#left {
+	width: 174px;
+	float: left;
+}
+#left div#appointLeft {
+	background-color: #7F9EBD;
+	padding: 5px;
+	margin: 5px 15px 5px 5px;
+	border: 1px solid #336699;
+}
+#left h5 {
+	font-size: 11px;
+	margin: 0px;
+	padding-bottom: 3px;
+	border-bottom: 1px solid #FFF;
+}
+#left ul {
+	margin: 0px;
+	padding: 2px 5px;
+	list-style-type: none;
+}
+#left ul li {
+	font-size: 11px;
+}
+#left li.appointmentOver {
+	color: #FF0000;
+	text-decoration: line-through;
+}
+
+#main {
+	padding-top: 10px;
+	float: left;
+	width: 596px;
+}
+#mainSec1{
+	padding-top: 10px;
+	float: left;
+	width: 100%;
+}
+
+
+#mainSec2{
+	padding-top: 10px;
+	float: left;
+	width: 100%;
+}
+#mainHeader{
+	padding-top: 10px;
+	float: left;
+	width: 596px;
+}
+
+
+.clear {
+	clear: both;
+}
+
+/*-----FORMS----*/
+table td {
+	font-size: 11px;
+}
+fieldset {
+	border: 1px solid #00557a;
+	padding: 0px 0px 10px 5px;
+	margin: 0px 0px 10px 10px;
+	
+}
+fieldset div.sectionHeader {
+	background-color: #227193;
+	padding: 0px;
+	margin: 0px 0px 0px -5px;
+	height: 20px;
+	color:#fff;
+}
+fieldset div.sectionHeaderRed {
+	background-color: Red ;
+	padding: 0px;
+	margin: 0px 0px 0px -5px;
+	height: 20px;
+}
+
+fieldset div.sectionHeaderRed h3 {
+	font-size: 12px;
+	letter-spacing: .1em;
+	margin: 0px;
+	padding: 2px 0px 0px 10px;
+	float: left;
+	
+}
+
+fieldset div.sectionHeaderRed span {
+	padding-right: 10px;
+	float: right;
+}
+
+fieldset div.sectionHeader h3 {
+	font-size: 12px;
+	letter-spacing: .1em;
+	margin: 0px;
+	padding: 2px 0px 0px 10px;
+	float: left;
+	
+}
+fieldset div.sectionHeader span {
+	padding-right: 10px;
+	float: right;
+}
+fieldset h4, h4 {
+	color: #0163D0;
+	font-size: 11px;
+	margin: 0px;
+}
+span.alergies {
+	font-size: 10px;
+	font-weight: normal;
+	color: #FF0000;
+}
+fieldset table {
+	font-size: 11px;
+}
+fieldset td.labels {
+	text-align: right;
+	font-weight:bold;
+	padding-bottom: 6px;
+}
+
+fieldset td.labelValue 
+{
+	text-align: left;
+	padding-bottom: 6px;
+	padding-left: 10px;
+	font-weight: bold;
+}
+
+
+fieldset input, fieldset select, fieldset textarea {
+	margin: 0px 5px 0px 3px;
+}
+input.btn {
+	border-left: 1px solid #999;
+	border-right: 1px solid #333;
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #333;
+	color: #FFF;
+		font-size: 11px;
+		font-weight: bold;
+		background-color: #336699;
+		text-decoration: none;
+	height: 20px;
+}
+input.btn:hover {
+	background-color: #1182FF;
+}
+div.submit {
+	margin-top: 10px;
+}
+
+
+/*---Data Tables---*/
+table.dataTable {
+	border: 1px solid #7F9EBD;
+	border-width: 0px 1px 1px;
+	margin: 10px 0px;
+}
+table.dataTable th {
+	font-size: 11px;
+	background-color: #7F9EBD;
+	text-align: center;
+	padding: 3px 5px;
+	border: 1px solid #FFF;
+	border-width: 0px 1px 1px 0px;
+}
+table.dataTable tr.odd td {
+	background-color: #DBEAF5;
+	border: 1px solid #FFF;
+	border-width: 0px 1px 1px 0px;
+	padding: 3px 5px;
+}
+table.dataTable tr.even td {
+	background-color: #FFF7E5;
+	border: 1px solid #FFF;
+	border-width: 0px 1px 1px 0px;
+	padding: 3px 5px;
+}
+table.dataTable tr.footer td {
+	background-color: #7F9EBD;
+	border: 1px solid #FFF;
+	border-width: 0px 1px 1px 0px;
+	padding: 3px 5px;
+}
+table.dataTable .endCell {
+	border-right: none;
+}
+table.dataTable tr:hover td {
+	background-color: #7F9EBD;
+}
+.odd{background-color: #DBEAF5;
+	border: 1px solid #FFF;
+	border-width: 0px 1px 1px 0px;
+	padding: 3px 5px;}
+.even{	background-color: #FFF7E5;
+	border: 1px solid #FFF;
+	border-width: 0px 1px 1px 0px;
+	padding: 3px 5px;}
+
+
+
+
