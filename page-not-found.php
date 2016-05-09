@@ -33,18 +33,7 @@ $book_data = $obj->getAnyTableAllData($obj->getTable("var_product"), " $search_i
 						<div class="row">
 <?php include_once("l-sidebar.php"); ?>
 							<div class="col-md-6 col-sm-6">
-								<form action="registration_submit.php" name="" method="post">
-									<h2 class="br-orange default-head">Registration Form</h2>
-									<div class="form-group">
-										<label> Email </label>
-										<input name="email" type="text" class="form-control" placeholder="Email">
-									</div>
-									<div class="form-group">
-										<label> Password </label>
-										<input name="password" type="password" class="form-control" placeholder="Password">
-									</div>
-										<button type="submit" class="btn btn-default">Register</button>
-								</form>	
+								<h2 class="br-orange default-head">Page Not Found </h2>
 							</div>
 <?php include_once("r-sidebar.php"); ?>
 						</div>

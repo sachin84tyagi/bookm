@@ -10,7 +10,7 @@ if($_GET["lid"]!="")
 {
 	$search_item .= " and location = '".trim($_GET["lid"])."' ";
 }	
-$book_data = $obj->getAnyTableAllData($obj->getTable("var_book"), " $search_item and status = '1'");	
+$book_data = $obj->getAnyTableAllData($obj->getTable("var_book"), " and location =");	
 ?>
 <?php include_once("header.php"); ?>
 				<!-- navigation menu with logo -->

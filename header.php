@@ -1,4 +1,12 @@
-<html>
+<?php
+session_start();
+/* $restricted_page = array('change-password.php','add-book.php');//make function for restricted_page.
+$page_name = end(explode("/",$_SERVER['SCRIPT_FILENAME']));
+if(empty($_SESSION["sess_user_id"]) && in_array($page_name, $restricted_page)) {
+	header('Location:page-not-found.php');
+} */
+
+?><html>
 	<head>
 		<meta charset="utf-8">
 		<title>Book Mitra</title>

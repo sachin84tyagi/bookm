@@ -1,6 +1,21 @@
 <?php 
 include('codelibrary/inc/variables.php'); 
+include_once("codelibrary/inc/admin-header.php");
+include("codelibrary/ckeditor/ckeditor.php");
+$edit_key = $_REQUEST["editKey"]==""?"":$_REQUEST["editKey"] ;
 $obj= new database_class();
+if($edit_key != "" )
+{
+ // $qry = "select p.* from ".$obj->getTable("var_profine_product")." p where 1=1 and p.id = '$edit_key'  order by p.id desc" ;	
+ $v   =  $obj->getAnyTableWhereData($obj->getTable("var_book"), " and id = '$edit_key' ") ; 
+ $subcategoryRec  =  $obj->getAnyTableWhereData($obj->getTable("var_category"), " AND status = '1' AND id = '".$v['category_id']."' ") ;  
+
+}
+$categoryRec = $obj->my_query("select * from ".$obj->getTable("var_category")." where parent_id = '0'") ;
+$stateRec = $obj->my_query("select * from ".$obj->getTable("var_state")) ;
+$style_front = "";
+
+/* $obj= new database_class();
 $search_item='';
 if($_GET["bid"]!="")
 {
@@ -10,9 +25,9 @@ if($_GET["lid"]!="")
 {
 	$search_item .= " and location = '".trim($_GET["lid"])."' ";
 }	
-$book_data = $obj->getAnyTableAllData($obj->getTable("var_product"), " $search_item and status = '1'");	
+$book_data = $obj->getAnyTableAllData($obj->getTable("var_book"), " $search_item and status = '1'");	
 $category_data = $obj->getAnyTableAllData($obj->getTable("var_category"), " and parent_id = '0'");
-$state_data = $obj->getAnyTableAllData($obj->getTable("var_state"));
+$state_data = $obj->getAnyTableAllData($obj->getTable("var_state")); */
 //print_r($state_data);
 //fld_state	
 /* echo "<pre>";
@@ -39,8 +54,8 @@ print_r($category_data);echo "</pre>"; */
 					<!-- inner items -->
 					<div class="inner-content items">
 						<div class="row">
-<?php include_once("l-sidebar.php"); ?>
-							<div class="col-md-6 col-sm-6">
+<?php //include_once("l-sidebar.php"); ?>
+							
 								<form action="add-book_submit.php" name="" method="post" enctype="multipart/form-data">
 									<h2 class="br-orange default-head">Add Book</h2>
 									<div class="form-group">
@@ -51,8 +66,8 @@ print_r($category_data);echo "</pre>"; */
 										<label> Category </label>
 										<select multiple="multiple" id="main-category" name="category[]" class="form-control">
 										  <option value="">--select--</option>
-										  <?php foreach($category_data as $k=>$v) { ?>
-										  <option value=<?php echo $v['id']; ?>><?php echo $v['title']; ?></option>
+										  <?php while($categoryData = mysql_fetch_array($categoryRec)) { ?>
+										  <option value=<?php echo $categoryData['id']; ?>><?php echo $categoryData['title']; ?></option>
 										  <?php } ?>
 										</select>
 									</div>
@@ -67,8 +82,8 @@ print_r($category_data);echo "</pre>"; */
 										<label> State </label>
 										<select id="state" name="state" class="form-control">
 										  <option value="">--select--</option>
-										  <?php foreach($state_data as $k=>$v) { ?>
-										  <option value=<?php echo $v['fld_id']; ?>><?php echo $v['fld_state']; ?></option>
+										 <?php while($stateData = mysql_fetch_array($stateRec)) { ?>
+										  <option value=<?php echo $stateData['fld_id']; ?>><?php echo $stateData['fld_state']; ?></option>
 										  <?php } ?>
 										</select>
 									</div>
@@ -85,8 +100,8 @@ print_r($category_data);echo "</pre>"; */
 									</div>
 										<button type="submit" class="btn btn-default">Register</button>
 								</form>	
-							</div>
-<?php include_once("r-sidebar.php"); ?>
+							
+<?php //include_once("r-sidebar.php"); ?>
 						</div>
 					</div>
 				
